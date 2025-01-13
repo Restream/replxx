@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <array>
+#include <stdexcept>
 
 #ifdef _WIN32
 
@@ -239,10 +240,10 @@ void Terminal::disable_raw_mode(void) {
  * @return	char32_t Unicode character
  */
 char32_t read_unicode_character(void) {
-	static char8_t utf8String[5];
+	static uchar8_t utf8String[5];
 	static size_t utf8Count = 0;
 	while (true) {
-		char8_t c;
+		uchar8_t c;
 
 		/* Continue reading if interrupted by signal. */
 		ssize_t nread;
