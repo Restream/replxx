@@ -1,6 +1,6 @@
 # -*- mode: CMAKE; -*-
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
 project( replxx VERSION 0.0.2 LANGUAGES CXX C )
 
